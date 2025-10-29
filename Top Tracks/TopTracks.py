@@ -13,11 +13,12 @@ load_dotenv()
 
 CLIENT_ID = ""
 CLIENT_SECRET = ""
+REDIRECT_URI = ""
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-        client_id=(""),
-        client_secret=(""),
-        redirect_uri=(""),
+        client_id=(CLIENT_ID),
+        client_secret=(CLIENT_SECRET),
+        redirect_uri=(REDIRECT_URI),
         scope='user-library-read playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private'
     ))
 usuario_id = sp.current_user()['id']
